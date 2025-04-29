@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health & Fitness Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+  <!-- Top Bar Section -->
+  <header class="bg-green-500 text-white py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4">
+      <div class="flex items-center space-x-4">
+        <img src="https://img.utdstc.com/icon/c3d/8aa/c3d8aab9c70ed0bf5004f96fc28da960cdb0430a242b8245c63737d079b96cf1:200" alt="App Logo" class="w-10 h-10 rounded-full" />
+        <h1 class="text-2xl font-semibold">Health & Fitness Hub</h1>
+      </div>
+      <div class="lg:hidden flex items-center">
+        <button id="menu-toggle" class="text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex space-x-4">
+        <a href="index.html" class="text-white font-medium hover:text-gray-200">Home</a>
+        <a href="yoga.html" class="text-white font-medium hover:text-gray-200">Yoga</a>
+        <a href="meditation.html" class="text-white font-medium hover:text-gray-200">Meditation</a>
+      </div>
+    </div>
+    <div id="mobile-menu" class="lg:hidden hidden bg-green-600 p-4">
+      <a href="index.html" class="block text-white font-medium hover:text-gray-200 py-2">Home</a>
+      <a href="yoga.html" class="block text-white font-medium hover:text-gray-200 py-2">Yoga</a>
+      <a href="meditation.html" class="block text-white font-medium hover:text-gray-200 py-2">Meditation</a>
+    </div>
+  </header>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+  <!-- Hero Section -->
+  <header class="bg-green-500 text-white text-center py-16 relative" style="background-image: url('https://www.pdcourses.net/blog_images/AdobeStock187336996.jpeg'); background-size: cover; background-position: center;">
+    <div class="absolute inset-0 bg-green-500 bg-opacity-50"></div>
+    <h1 class="text-4xl font-bold relative">Health & Fitness Hub</h1>
+    <p class="mt-4 text-lg relative">Your one-stop destination for fitness, nutrition, yoga, meditation, and mental wellness.</p>
+  </header>
+
+  <!-- Progress Section -->
+  <section class="py-8 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Track Your Progress</h2>
+    <p class="text-lg mb-4">Keep track of the activities you’ve completed!</p>
+    <div class="relative w-full max-w-xs mx-auto">
+      <div class="bg-gray-300 h-4 rounded-full">
+        <div id="progress-bar" class="bg-green-500 h-4 rounded-full" style="width: 0;"></div>
+      </div>
+      <p id="activity-count" class="mt-2 text-xl font-semibold">Activities Completed: 0</p>
+    </div>
+  </section>
+
+  <!-- Main Content Section -->
+  <main class="py-16">
+    <div class="max-w-5xl mx-auto px-4">
+
+      <!-- Section: Yoga, Meditation, Nutrition -->
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <a href="yoga.html" class="text-center">
+          <img class="w-full h-64 object-cover rounded-lg shadow-md" src="https://yogaharta.com.au/wp-content/uploads/2023/06/adult-woman-practicing-yoga-home-scaled.jpg" alt="Yoga">
+          <p class="mt-2">Find peace and flexibility with these yoga tutorials.</p>
+        </a>
+
+        <a href="meditation.html" class="text-center">
+          <img class="w-full h-64 object-cover rounded-lg shadow-md" src="https://res.cloudinary.com/webfactory/image/fetch/f_auto/q_auto/https://s3.eu-west-1.amazonaws.com/cdn.webfactore.co.uk/sr_563021.jpg?t=1709955176" alt="Meditation">
+          <p class="mt-2">Relax and de-stress with guided meditation sessions.</p>
+        </a>
+
+        <a href="https://www.myfitnesspal.com/" target="_blank" class="text-center">
+          <img class="w-full h-64 object-cover rounded-lg shadow-md" src="https://domf5oio6qrcr.cloudfront.net/medialibrary/16320/bigstock-health-food-selection-super-foods-fruits-veggies.jpg" alt="Nutrition Plan">
+          <p class="mt-2">Track your calories and manage your diet with personalized nutrition plans.</p>
+        </a>
+      </section>
+
+      <!-- Section: Workout Plan, Healthy Dishes, Games -->
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <a href="https://www.bodybuilding.com/workout-plans" target="_blank" class="text-center">
+          <img class="w-full h-64 object-cover rounded-lg shadow-md" src="https://www.bodybuilding.com/images/2017/june/the-back-and-biceps-workout-that-went-global-header-v2-960x540.jpg" alt="Workout Plans">
+          <p class="mt-2">Explore various workout plans designed to help you reach your fitness goals.</p>
+        </a>
+
+        <a href="https://www.eatingwell.com/recipes/" target="_blank" class="text-center">
+          <img class="w-full h-64 object-cover rounded-lg shadow-md" src="https://cook.fnr.sndimg.com/content/dam/images/cook/fullset/2012/8/12/0/EK0509_Pasta-Primavera.jpg.rend.hgtvcom.1280.1280.85.suffix/1359063559395.webp" alt="Healthy Dishes">
+          <p class="mt-2">Browse healthy dishes and recipes to maintain a balanced diet.</p>
+        </a>
+
+        <a href="games/index.html" class="text-center">
+          <img class="w-full h-64 object-cover rounded-lg shadow-md" src="https://img.itch.zone/aW1nLzE5NzI3NDc1LnBuZw==/original/lUSx8%2B.png" alt="Relaxing Games">
+          <p class="mt-2 text-lg font-medium">Play mind relaxing games like memory match to refresh your brain offline.</p>
+        </a>
+      </section>
+
+      <!-- Chatbot Section -->
+      <section class="mb-16">
+        <div class="flex justify-center">
+          <a href="https://chatgpt.com/g/g-FSHFUqfuv-fitness-health" target="_blank">
+            <div class="fixed bottom-24 right-8">
+              <img src="https://cdn-icons-png.freepik.com/512/13086/13086996.png" alt="Chatbot Image" class="w-16 h-16 rounded-full shadow-lg">
+            </div>
+            <button class="fixed bottom-8 right-8 px-6 py-3 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition duration-300">
+              ChatBot
+            </button>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; 2025 Health & Fitness Hub | All Rights Reserved</p>
+  </footer>
+
+  <!-- Progress Tracking Script -->
+  <script>
+    let progress = parseInt(localStorage.getItem('progress')) || 0;
+    const progressBar = document.getElementById('progress-bar');
+    const activityCount = document.getElementById('activity-count');
+
+    function updateProgressUI() {
+      progressBar.style.width = progress + '%';
+      activityCount.textContent = 'Activities Completed: ' + Math.round(progress / 20);
+    }
+
+    updateProgressUI();
+
+    function handleActivityClick(activityName) {
+      const completedActivities = JSON.parse(localStorage.getItem('completedActivities')) || [];
+      if (!completedActivities.includes(activityName)) {
+        completedActivities.push(activityName);
+        localStorage.setItem('completedActivities', JSON.stringify(completedActivities));
+        progress = completedActivities.length * 20;
+        localStorage.setItem('progress', progress);
+        updateProgressUI();
+      }
+    }
+
+    const activities = [
+      { selector: 'a[href="yoga.html"]', name: 'Yoga' },
+      { selector: 'a[href="meditation.html"]', name: 'Meditation' },
+      { selector: 'a[href="https://www.myfitnesspal.com/"]', name: 'Nutrition' },
+      { selector: 'a[href="https://www.bodybuilding.com/workout-plans"]', name: 'Workout' },
+      { selector: 'a[href="https://www.eatingwell.com/recipes/"]', name: 'HealthyDishes' },
+      { selector: 'a[href="games/memory/index.html"]', name: 'RelaxingGame' }
+    ];
+
+    activities.forEach(activity => {
+      const link = document.querySelector(activity.selector);
+      if (link) {
+        link.addEventListener('click', () => {
+          handleActivityClick(activity.name);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

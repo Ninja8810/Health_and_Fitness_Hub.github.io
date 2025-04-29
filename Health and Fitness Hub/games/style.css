@@ -1,0 +1,70 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Body styling */
+  body {
+    font-family: sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    min-height: 100vh;
+  }
+  
+  /* Title/Header */
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #2d6a4f;
+    text-align: center;
+  }
+  
+  /* Game board container */
+  .game-board {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+  
+    /* Responsive grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* Individual cards */
+  .card {
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .card {
+      height: 80px;
+      font-size: 1.5rem;
+    }
+  }
+  
